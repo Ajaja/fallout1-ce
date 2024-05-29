@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 11
@@ -48,8 +48,8 @@ jobs:
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: fallout-ce-android.apk
-          path: os/android/app/build/outputs/apk/release/app-release.apk
+          name: fallout-ce-android.zip
+          path: os/android/app/build/outputs/apk/
           retention-days: 1
 
   windows:
